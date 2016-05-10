@@ -56,7 +56,18 @@ to start with a minimal MVP, to trial the tech
 
 - owncloud docker + fixed storage
 
-- the api for our purposes
+- the api for our purposes. For an early prototype, is enough if validates the user with a simple secret word, and launches command line stuff blindly (but logged).
 
 
-- 
+
+# Lambda/Spot architecture
+
+Based on the ideas from [This guy's approach at making ec2 affordable](https://mcristi.wordpress.com/2016/04/21/my-approach-at-making-aws-ec2-affordable-automatic-replacement-of-autoscaling-nodes-with-equivalent-spot-instances/?utm_content=buffer6f1dc&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
+
+Instead of relying all the time in EC2 instances, that are expensive, go towards a spot-instance design. 
+- Use AWS api gateway to control the backend.(good as exercise)
+- Use lambda functions to start up instances/launch heavier services
+- run as much as you can in spot instances. Maybe do some stuff with ECS?
+
+The lambda thing would be a good case using k8s or big fat instances too.
+
