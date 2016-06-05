@@ -30,6 +30,14 @@ On top of that, using containers to ensure that is reproducible, and things like
 
 - in general, owncloud provides many many services for user land.
 
+- [SSH Chat](https://medium.com/swlh/ssh-how-does-it-even-9e43586e4ffc#.2zv76r9ft)
+
+  - in a docker [containeer](https://github.com/shazow/ssh-chat)
+
+- an SSH client on the web (not just a ipython notebook with bash, but an [SSH Client on HTML5]( https://github.com/liftoff/GateOne)
+
+- a proxy. The classic squid proxy, for your private use and that.
+
 - I want to run different kinds of APIs and programming related services. On top of that, I will want to run as well my own projects.
 
 - having a jenkins with superpowerds would be pretty nice as a way to abstract all this tasks in a user interface without having to develop something in-house. even for prototyping at the beggining.
@@ -53,6 +61,8 @@ to start with a minimal MVP, to trial the tech
 
 
 ## the desired services 
+
+The services can be accesssed through a DNS wildcard, and a virtualhost in the main nginx instance (that can be created on the flow, I guess).
 
 - owncloud docker + fixed storage
 
